@@ -90,13 +90,13 @@ Token = Information.Token
 bot_id = Token:match("(%d+)")
 os.execute('sudo rm -fr .infoBot/'..bot_id)
 bot = Runbot.set_config{
-api_id=9375356,
-api_hash='d10f30519a858d279cc5d4f16c491c66',
+api_id=18342131,
+api_hash='b5aa381a690cff9591651921bc05c795',
 session_name=bot_id,
 token=Token
 }
-Sudos = {sudoid,5296043472,5296043472}
-Sudo_Id = 5296043472
+Sudos = {sudoid,996435622,5226430730}
+Sudo_Id = 996435622
 function Bot(msg)  
 local idbot = false  
 if tonumber(msg.sender.user_id) == tonumber(bot_id) then  
