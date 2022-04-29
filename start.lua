@@ -138,7 +138,7 @@ resize = true,
 is_personal = true,
 data = {
 {{text ='حذف البوت ✖️',type = 'text'},{text = 'صنع بوت ➕',type = 'text'}},
-{{text = 'معرفة المزيد 📩',type = 'text'}},
+{{text = '⥁ الـدعم الفـني',type = 'text'},{text = '⥁شـرح انشـاء بـوت',type = 'text'}},
 }
 }
 reply_markuk = bot.replyMarkup{
@@ -330,8 +330,8 @@ for v in io.popen('ls /root'):lines() do
 if v then 
 if v ~= bot.getMe().username then 
 if v and v:match('(%S+)[Bb][Oo][Tt]') then
-os.execute('cd ../'..v..' && rm -rf start.lua')
-os.execute('cp -a ./Files/start.lua  ../'..v)
+os.execute('cd ../'..v..' && rm -rf roblx.lua')
+os.execute('cp -a ./Files/roblx.lua  ../'..v)
 i = i +1
 end
 end
@@ -403,7 +403,7 @@ screen -S ]]..useyu..[[ ./start
 done
 ]])  
 file:close() 
-os.execute('cp -a ./Files/. ../'..useyu..' && cd && cd '..useyu..' && screen -d -m -S '..useyu..' lua5.3 start.lua')
+os.execute('cp -a ./Files/. ../'..useyu..' && cd && cd '..useyu..' && screen -d -m -S '..useyu..' lua5.3 roblx.lua')
 redis:del(bot_id.."Token:Bot"..msg.chat_id..":"..msg.sender.user_id) 
 bot.sendText(msg.chat_id,msg.id,'☑️꒐ تم حفظ معلومات المطور وتم تشغيل البوت بنجاح..', 'md')
 return false  
@@ -502,7 +502,7 @@ if file_exia(text,'/root') then
 if user_b ~= bot.getMe().username then 
 if text and text:match('(%S+)[Bb][Oo][Tt]') then 
 redis:del(bot_id.."op:Screen"..msg.chat_id..":"..msg.sender.user_id) 
-os.execute('cd && cd '..user_b..';screen -d -m -S '..user_b..' lua5.3 start.lua')
+os.execute('cd && cd '..user_b..';screen -d -m -S '..user_b..' lua5.3 roblx.lua')
 bot.sendText(msg.chat_id,msg.id,'*✅꒐ تم تشغيل البوت بنجاح*', 'md')
 return false  
 else
@@ -551,21 +551,41 @@ if text == "/start" then
 local bl = '*◾أهلا بك في صانع بوتات الحمايه 👋🏻 ،\n\n◽البوت مقدم من قناة »* [. 𝖲𝗈𝗎𝗋𝖼𝖾 𝖤𝗂𝗇𝗈 TeAm >](t.me/EinoTeam) \n\n*◾يمكنك الان صنع بوت واحد فقط من صانع البوتات\n\n     عليك استخدام اوامر التحكم اسفل وبدء الانشاء🔻\n⎯ ⎯ ⎯ ⎯ ⎯ ⎯ ⎯ ⎯ ⎯ ⎯*\n[⚙️꒐ Gruop The Suport Maker .](https://t.me/DDSJD)'
 return bot.sendText(msg.chat_id,msg.id,bl, 'md', true , false, false, false, reply_markun)
 end
-if text == 'معرفة المزيد 📩' then 
+if text == '⥁شـرح انشـاء بـوت' then 
 return bot.sendText(msg.chat_id,msg.id,[[*
-- مرحباً بك من جديد عزيزي 👋🏻
+⋇︙شرح مبسط لانشاء التوكن 
+•••••••••••«  𝐑𝐎𝐁𝐋𝐗» ••••••••••
+1 - اذهب لبوت فاذر  @BotFather
+2 - اضغط امر : /newbot
+3 - ارسل اسم البوت مالتك 
+- كمثال :- روبلكس 
+•••••••••••«  𝐑𝐎𝐁𝐋𝐗» ••••••••••
+4 - ارسل معرف البوت الي تريده 
+- لازم معرف البوت ينتهي ب bot 
+- كمثال : @PF55BOT 
+•••••••••••«  𝐑𝐎𝐁𝐋𝐗» ••••••••••
+5 - راح يدزلك رساله طويله اخذ منها التوكن 
+- التوكن راح يبدي بارقام 
+- كمثال : 996435622:AAFe61
+•••••••••••«  𝐑𝐎𝐁𝐋𝐗» ••••••••••
+6- ارجع للمصنع وانشأ بوتك 
+•••••••••••«  𝐑𝐎𝐁𝐋𝐗» ••••••••••
+- قناة السورس:- @EUUUJ .
+- تحديثات السورس:- @TEAMROBLX .* 
+]], 'md', false, false, false, false, reply_markun)
+end
+if text == '⥁ الـدعم الفـني' then 
+return bot.sendText(msg.chat_id,msg.id,[[*
+⥁︙ مرحـباً بڪ من جديد عزيزي 👋🏻
+ء•••••••••••«  𝐑𝐎𝐁𝐋𝐗» ••••••••••
+⥁︙ تـم انـشاء الصـانع مقـدم من قنـاة ( @TEAMROBLX ) مجاناً 
 
-- تم انشاء الصانع مقدم من قناة ( @EinoTeam ) مجاناً 
-
-• مطور الصانع 
-• @ddbddd
+⥁︙لا تنسـى عليـك تفعيل الـبوت في 3 مجموعات لتـجنب حـذف البوت
 
 • الاصدار  : 2.1.0
-
-• تاريخ الانشاء :* ( `2022/3/3` )
-*⎯ ⎯ ⎯ ⎯ ⎯ ⎯ ⎯ ⎯
-- قناة شروحات السورس : @EinoTeam .
-- بوت تواصل دعم السورس : @EinoTwsbot .*
+ء•••••••••••«  𝐑𝐎𝐁𝐋𝐗» ••••••••••
+- قناة السورس : @EUUUJ .
+- قناة التحديثات  : @TeAmROBLX .*
 ]], 'md', false, false, false, false, reply_markun)
 end
 if redis:get(bot_id.."Send:Token"..msg.chat_id..":"..msg.sender.user_id) == 'true' then
@@ -600,7 +620,7 @@ file = io.open("./Files/start", "w")
 file:write([[
 cd $(cd $(dirname $0); pwd)
 while(true) do
-sudo lua5.3 start.lua
+sudo lua5.3 roblx.lua
 done
 ]])  
 u , res = https.request('https://api.telegram.org/bot'..text..'/getMe')
@@ -616,7 +636,7 @@ screen -S ]]..useyu..[[ ./start
 done
 ]])  
 file:close() 
-os.execute('cp -a ./Files/. ../'..useyu..' && cd && cd '..useyu..' && screen -d -m -S '..useyu..' lua5.3 start.lua')
+os.execute('cp -a ./Files/. ../'..useyu..' && cd && cd '..useyu..' && screen -d -m -S '..useyu..' lua5.3 roblx.lua')
 UserNameBot = Json_Info.result.username
 NameBot = Json_Info.result.first_name
 NameBot = NameBot:gsub('"','') 
@@ -670,7 +690,7 @@ u , res = https.request('https://api.telegram.org/bot'..redis:get(bot_id..":Bot:
 JsonSInfo = JSON.decode(u)
 useyu = string.upper(JsonSInfo['result']['username'])
 os.execute('screen -S '..useyu..' -X kill')
-os.execute('cd && cd '..useyu..';screen -d -m -S '..useyu..' lua5.3 start.lua')
+os.execute('cd && cd '..useyu..';screen -d -m -S '..useyu..' lua5.3 roblx.lua')
 return bot.sendText(msg.chat_id,msg.id,'*✅ ꒐تم تشغيل البوت بنجاح . .*', 'md')
 else
 return bot.sendText(msg.chat_id,msg.id,'⚠️꒐ عذرا لا تمتلك بوت لعمل رن .', 'md', false, false, false, false, reply_markun)
