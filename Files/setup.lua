@@ -31,6 +31,6 @@ rem_and_create_dir(tdbot_client_path)
 os.execute('sudo mv tdbot.lua ' .. table.concat(tdbot_client_path, '/'))
 os.execute('sudo rm -rf tdbot.zip')
 if exists(table.concat(so_path_file, '/')) and exists(table.concat(tdbot_client_path, '/')) then
-os.execute('sudo lua5.3 start.lua')
+os.execute('sudo lua5.3 JOKER.lua')
 end
 end
